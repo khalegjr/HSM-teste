@@ -78,7 +78,7 @@ return [
     |
     */
 
-    'locale' => 'en',
+    'locale' => 'pt',
 
     /*
     |--------------------------------------------------------------------------
@@ -91,7 +91,7 @@ return [
     |
     */
 
-    'fallback_locale' => 'en',
+    'fallback_locale' => 'pt',
 
     /*
     |--------------------------------------------------------------------------
@@ -160,7 +160,6 @@ return [
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
         // Registra api de streaming do twitter
-        Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiServiceProvider::class,
 
     ],
 
@@ -210,7 +209,6 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
-        'TwitterStreamingApi' => Spatie\LaravelTwitterStreamingApi\TwitterStreamingApiFacade::class,
 
     ],
 
