@@ -9,7 +9,7 @@
         "fideloper/proxy": "^4.0",
         "laravel/framework": "5.6.*",
         "laravel/tinker": "^1.0",
-        "fennb/phirehose": "^1.1"
+        "spatie/laravel-twitter-streaming-api": "^1.1"
     },
     "require-dev": {
         "filp/whoops": "^2.0",
@@ -22,7 +22,9 @@
         "classmap": [
             "database/seeds",
             "database/factories",
-            "vendor/fennb/phirehose/lib"
+            "vendor/fennb/phirehose/lib",
+            "vendor/spatie/twitter-streaming-api/src",
+            "vendor/spatie/laravel-twitter-streaming-api/src"
         ],
         "psr-4": {
             "App\\": "app/"
