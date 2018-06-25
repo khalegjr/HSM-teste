@@ -46,8 +46,9 @@ class ConnectToStreamingAPI extends Command
         
         $this->twitterStream->consumerKey = $twitter_consumer_key;
         $this->twitterStream->consumerSecret = $twitter_consumer_secret;
-        $this->twitterStream->setLocations(array(
-            array(-47.0762088, -22.8488021, -47.0761509, -22.8119143),
+        $this->twitterStream->setLocations(array( // TODO: desenvolver método para passar lista de localização
+            array(-46.7755847, -24.004602, -46.5377017, -23.357259), // São Paulo [long sudoeste, lat sudoeste, long
+            // noroeste, lat noroeste]
         ));
         //$this->twitterStream->setTrack(array('scotch_io'));
         $this->twitterStream->consume();

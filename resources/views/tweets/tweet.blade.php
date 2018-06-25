@@ -12,5 +12,6 @@
         </a></p>
         <p>{{ (json_decode($tweet->json))->lang }}</p>
         <p>{{ $orthos[$tweet->id] }}</p>
+
     </div>
 </div>
