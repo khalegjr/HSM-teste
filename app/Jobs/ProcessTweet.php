@@ -42,6 +42,8 @@ class ProcessTweet implements ShouldQueue
         $user_id = isset($tweet['user']['id_str']) ? $tweet['user']['id_str'] : null;
         $user_screen_name = isset($tweet['user']['screen_name']) ? $tweet['user']['screen_name'] : null;
         $user_avatar_url = isset($tweet['user']['profile_image_url_https']) ? $tweet['user']['profile_image_url_https'] : null;
+        $user_lang = isset($tweet['lang']) ? $tweet['lang'] : null;
+        $user_locate = "SP"; // TODO: desenvolver lista para selecionar local
         
         if (isset($tweet['id'])) {
             Tweet::create([
@@ -51,6 +53,8 @@ class ProcessTweet implements ShouldQueue
                 'user_id' => $user_id,
                 'user_screen_name' => $user_screen_name,
                 'user_avatar_url' => $user_avatar_url,
+                'user_lang' => $user_lang,
+                'user_locate' => $user_locate,
                 'approved' => 0
             ]);
         }
