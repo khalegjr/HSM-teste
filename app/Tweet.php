@@ -16,6 +16,8 @@ class Tweet extends Model
         'user_id',
         'user_screen_name',
         'user_avatar_url',
+        'user_lang',
+        'user_locate',
         'public',
         'approved'
     ];
