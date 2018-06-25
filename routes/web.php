@@ -22,7 +22,7 @@ Route::get('/', function () {
             $orthos[$tweet->id] = $teste->check($tweet);
         }
     } else {
-        $tweets = App\Tweet::where('approved',1)->orderBy('created_at','desc')->take(5)->get();
+        $tweets = App\Tweet::orderBy('created_at','desc')->paginate(10);
         // TODO: transferir essa parte para a classe de processo do Tweet para gravar no banco de dados se aprovado
         // ou não
         foreach ($tweets as $tweet) {
