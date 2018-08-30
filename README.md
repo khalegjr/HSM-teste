@@ -10,14 +10,20 @@ Utiliza o banco PostgreSQL devido a incompatibilidade do Laravel com o MariaDB 1
 Altera o arquivo .env com a conexão com o banco de dados de sua preferência.
 
 É preciso criar as seguintes variáveis de sistema em .env, com os dados de acesso do Twitter.
+
+```php
 TWITTER_ACCESS_TOKEN=
 TWITTER_ACCESS_TOKEN_SECRET=
 TWITTER_CONSUMER_KEY=
 TWITTER_CONSUMER_SECRET=
+```
 
 Para ouvir os tweets da região metropolitana de São Paulo basta executar os dois comandos:
+
+```php
 php artisan twitter:track
 php artisan queue:listen
+```
 
 Isso já deve ser suficiente para popular o banco de dados e apresentar no index.
 
